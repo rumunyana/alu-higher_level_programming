@@ -38,3 +38,28 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
 
+    def area(self):
+        """" prints area of the rectangle"""
+        A = self.__height * self.__width
+        return A
+
+    def perimeter(self):
+        """perimeter of rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            p = 2 * (self.__height + self.__width)
+            return p
+
+    def __str__(self):
+        """return rectangle using # sign"""
+        if self.__width == 0 or self.__height == 0:
+            return ''
+        else:
+            rectangle = ''
+            for h in range(self.__height):
+                for w in range(self.__width):
+                    rectangle = rectangle + '#'
+
+                rectangle = rectangle + '\n'
+            return rectangle[:-1]
