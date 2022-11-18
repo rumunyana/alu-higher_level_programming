@@ -1,3 +1,3 @@
-#!/bin/bash
-# display Content-Length
-curl -sI "$1" | grep 'Content-Length' | cut -d " " -f2
+#!/bin/bash 
+# take in a url and display the content 
+curl -sI "$1" | grep 'Content-Length'| cut -d " " -f2
